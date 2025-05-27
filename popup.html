@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusFlow AI</title>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="popup">
+    <div class="popup-header">
+      <div class="header-content">
+        <img src="assets/logo.png" alt="FocusFlow AI Logo" class="logo-image">
+        <h1>FocusFlow AI</h1>
+      </div>
+      <button class="theme-toggle" title="Toggle Theme">
+        <span class="theme-icon sun-icon active">☀️</span>
+        <span class="theme-icon moon-icon">🌙</span>
+      </button>
+    </div>
+    <div class="popup-card">
+      <section class="summary-card">
+        <div class="period-selector">
+          <label class="period-radio">
+            <input type="radio" name="period" value="today" checked>
+            <span>Today</span>
+          </label>
+          <label class="period-radio">
+            <input type="radio" name="period" value="yesterday">
+            <span>Yesterday</span>
+          </label>
+          <label class="period-radio">
+            <input type="radio" name="period" value="allTime">
+            <span>All Time</span>
+          </label>
+        </div>
+        <div class="score-display">
+          <p>Productivity Score: <span id="score" class="highlight">0%</span></p>
+        </div>
+        <div class="stats">
+          <p>Productive: <span id="productive-time">0.0</span> min</p>
+          <p>Unproductive: <span id="unproductive-time">0.0</span> min</p>
+          <p>Neutral: <span id="neutral-time">0.0</span> min</p>
+        </div>
+        <div class="chart-wrapper">
+          <canvas id="productivityChart"></canvas>
+        </div>
+      </section>
+      <button id="tips-toggle" class="toggle-btn">Show Tips</button>
+      <section class="tips-section" id="tips-section" style="display: none;">
+        <h2>Productivity Tips</h2>
+        <ul id="suggestions"></ul>
+      </section>
+      <button id="settings-btn" class="action-btn">⚙️ Settings</button>
+      <div class="footer-actions">
+        <a href="privacy.html" id="privacy-btn" target="_blank" rel="noopener noreferrer" class="footer-link">🔒 Privacy</a>
+        <a href="faq.html" id="privacy-btn" target="_blank" rel="noopener noreferrer" class="footer-link">❓ FAQ</a>
+        <a href="https://mdanwarul.gumroad.com/l/shawn" id="support-btn" target="_blank" rel="noopener noreferrer" class="footer-link">❤️ Support ❤️</a>
+      </div>
+    </div>
+  </div>
+  <script src="chart.umd.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

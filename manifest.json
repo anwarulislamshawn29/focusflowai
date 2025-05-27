@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "FocusFlow AI",
+  "version": "1.0",
+  "description": "AI-powered Chrome extension to analyze browsing habits and boost productivity.",
+  "permissions": [
+    "history",
+    "storage",
+    "alarms",
+    "tabs"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+  "resources": ["settings.html", "settings.js", "faq.html", "faq.css", "faq.js", "assets/*", "chart.umd.js"],
+    "matches": ["<all_urls>"]
+    }
+  ]
+}
